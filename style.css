@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(52, 52, 52);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#containerMain {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#testa {
+    font-size: 70px;
+    font-family: Oxanium;
+    color: rgb(0, 255, 64);
+    text-shadow: 0 0 10px rgb(0, 161, 0);
+    margin-top: 1%;
+}
+
+#x{ 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+#tamanhoDaSenha {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 19px;
+    margin-top: 25px;
+}
+
+#valor{
+    color: rgb(134, 255, 74);
+    text-shadow: 0 0 25px rgb(80, 225, 116);
+}
+
+#slider {
+    margin: auto;
+    width: 400px;
+    margin-top: 1.3%;
+    margin-bottom: 1.3%;
+    -webkit-appearance: none;
+    background: rgb(96, 96, 96);
+    outline: none;
+    height: 18px;
+    border-radius: 2px;   
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 23px;
+    border-radius: 8%; 
+    background: rgb(0, 255, 64);
+    cursor: pointer;
+}
+
+#selecionarCaracteres{
+    background-color: rgb(44, 44, 44);
+    margin: auto;
+    margin-top: 6px;
+    width: 400px;
+    height: 180px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+    gap: 10px;
+}
+
+#gerarSenha {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    margin: auto;
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(96, 96, 96);
+    color: rgb(41, 41, 41);
+}
+
+#gerarSenha:hover{
+    background-color:rgb(0, 255, 64);
+    box-shadow: 0 0 7px rgb(0, 255, 64);
+    transition: 110ms;
+}
+
+#gerarSenha:active{
+    background-color: rgb(52, 52, 52);
+    color: rgb(96, 96, 96);
+    box-shadow: none;
+    border: solid 1px rgb(96, 96, 96);
+}
+
+#containerFooter {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+}
+
+#senhaGerada {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 19px;
+    margin-top: 0.7%;
+}
+
+#senha{ 
+    margin: auto;
+    margin-top: 1%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    background-color: white;
+    color: rgb(52, 52, 52);
+    padding: 1px 10px 2px 10px;
+}
+
+#cliqueCopiar {
+    width: 290px;
+    height: 25px;
+    line-height: 23px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+    margin-top: 1%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(52, 52, 52);
+    border-radius: 2px;
+}
+
+#cliqueCopiar:hover {
+background-color: rgb(96, 96, 96);
+transition: 110ms;
+}
+
+#cliqueCopiar:active{
+    background-color: rgb(52, 52, 52);
+    color: rgb(96, 96, 96);
+    border: solid 1px rgb(96, 96, 96);
+}
+
+@keyframes alert{
+    0% {left: -450px}
+
+    50% {left: calc(50% - 225px)}
+    50% {color:rgb(0, 255, 64)}
+
+    100% {left:calc(100%)}
+}
+
+#alerta{
+    /*===============*/
+    display: none;
+    position: absolute;
+    top: 30%;
+    bottom: 35%;
+    left: -450px;
+    right: 0%;
+    /*===============*/
+    /* margin: auto; */
+    width: 450px;
+    height: 135px;
+    line-height: 135px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    font-size: 50px;
+    font-family: Oxanium;
+    color: rgb(96, 96, 96);
+    background-color: rgba(0, 0, 0, 0.912);
+    animation-name: alert;
+    animation-duration: 1.7s;
+    animation-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+
+/* ========================================================
+======================================================== */
+
+@media screen and (max-width: 550px) { 
+    #testa {
+        font-size: 50px;
+        margin-top: 10%;
+    }
+    
+    #tamanhoDaSenha {
+        margin-top: 6%;
+        font-size: 15px;
+    }
+    
+    #slider {
+        width: 350px;
+        margin-top: 8%;
+        margin-bottom: 2%;
+      }
+    
+    #gerarSenha {
+        width: 350px;
+    }
+    
+    #senhaGerada {
+        margin-top: 2%;
+        font-size: 15px;
+    }
+    
+    #senha{
+        margin-top: 3%;
+        font-size: 27px;
+    }
+    
+    #cliqueCopiar {
+        margin-top: 6%;
+    }
+    
+    
+    @keyframes alert{
+        0% {left: -300px}
+    
+        50% {left: calc(50% - 150px)}
+        50% {color:rgb(0, 255, 64)}
+    
+        100% {left:calc(100%)}
+    }
+    
+    #alerta{
+        /*===============*/
+        left: -300px;
+        /*===============*/
+        width: 300px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 30px;
+    }
+}
+
+
+/* =============================
+============================= */
+
+
+@media screen and (max-width: 400px) { 
+    #testa {
+        font-size: 40px;
+        margin-top: 10%;
+    }
+    
+    
+    #slider {
+        width: 200px;
+      }
+    
+    #gerarSenha {
+        width: 200px;
+    }
+    
+    #senha{
+        margin-top: 3%;
+        font-size: 15px;
+    }
+    
+    #cliqueCopiar {
+        margin-top: 6%;
+        font-size: 12px;
+        width: 200px;
+    }
+    
+    
+    @keyframes alert{
+        0% {left: -200px}
+    
+        50% {left: calc(50% - 100px)}
+        50% {color:rgb(0, 255, 64)}
+    
+        100% {left:calc(100%)}
+    }
+    
+    #alerta{
+        /*===============*/
+        left: -300px;
+        /*===============*/
+        width: 200px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 20px;
+        border-top-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+}
+
